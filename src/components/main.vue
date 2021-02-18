@@ -181,7 +181,6 @@ export default {
   overflow: hidden
   backdrop-filter: blur(4px)
   -webkit-backdrop-filter: blur(4px)
-
   p
     margin-top: 10px
     margin-left: 9px
