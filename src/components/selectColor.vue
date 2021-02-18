@@ -2,16 +2,16 @@
   <div class="form_elemetn">
     <p>Выберите цветность татуировки</p>
     <div class="selectContainer">
-      <div class="select" v-on:touchstart="chenge">
+      <div class="select" v-on:click="chenge">
         <p>{{ please }}</p>
         <i class="fas fa-sort-down"></i>
       </div>
-      <div class="popUp" v-bind:class="{ done: invisible }">
-        <p v-on:touchstart="select" id="1">Однотонная</p>
+      <div class="popUp" v-bind:class="{ done: invisible}">
+        <p v-on:click="select" id="1">Однотонная</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="1.1">2 цвета</p>
+        <p v-on:click="select" id="1.1">2 цвета</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="1.2">3 и более цвета</p>
+        <p v-on:click="select" id="1.2">3 и более цвета</p>
       </div>
     </div>
   </div>
@@ -33,15 +33,18 @@ export default {
     select(elem) {
       this.please = elem.target.innerHTML;
       this.chenge();
-      this.$emit('choice', elem.target.id)
+      this.$emit("choice", elem.target.id);
     },
   },
 };
 </script>
 
 <style lang="sass" scoped>
+
+
 .done
-  transition-duration: 0.5s
   height: 121px
   overflow: hidden
+  transition-duration: 0.5s
+ 
 </style>

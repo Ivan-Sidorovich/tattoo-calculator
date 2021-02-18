@@ -2,26 +2,26 @@
   <div class="form_elemetn">
     <p>Выберите место нанесения</p>
     <div class="selectContainer">
-      <div class="select" v-on:touchstart="chenge">
+      <div class="select" v-on:click="chenge">
         <p>{{ please }}</p>
         <i class="fas fa-sort-down"></i>
       </div>
       <div class="popUp" v-bind:class="{ done: invisible }">
-        <p v-on:touchstart="select" id="31">Шея/ за ухом</p>
+        <p v-on:click="select" id="31">Шея/ за ухом</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="30">Клюяица / грудь</p>
+        <p v-on:click="select" id="30">Клюяица / грудь</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="27">Ребра/ живот</p>
+        <p v-on:click="select" id="27">Ребра/ живот</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="25">Спина</p>
+        <p v-on:click="select" id="25">Спина</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="25">Плечо / прелплечье</p>
+        <p v-on:click="select" id="25">Плечо / прелплечье</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="31">кисть / пальцы</p>
+        <p v-on:click="select" id="31">кисть / пальцы</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="25">бедро/ голень</p>
+        <p v-on:click="select" id="25">бедро/ голень</p>
         <div class="border"></div>
-        <p v-on:touchstart="select" id="31">Ступня</p>
+        <p v-on:click="select" id="31">Ступня</p>
       </div>
     </div>
   </div>
@@ -51,7 +51,7 @@ export default {
 
 <style lang="sass" scoped>
 .done
-  transition-duration: 0.5s
   height: 330px
   overflow: hidden
+  transition-duration: 0.5s
 </style>

@@ -68,14 +68,8 @@ export default {
   display: flex
   justify-content: center
 
-body
-  background: url(../img/background.jpg) no-repeat
-  background-attachment: fixed
-  background-position: 50% 0%
-
 .container
   min-height: 100%
-  overflow: scroll
   min-width: 100%
   margin: 0 auto
 
@@ -110,23 +104,21 @@ body
     margin-top: 20px
     position: relative
 
-    input[type="number"]
-
+    .meaning
       width: 114px
       height: 36px
       background: rgba(176, 133, 126, 0.61)
       border-radius: 6px
-      -moz-appearance: none
-      -webkit-appearance: none
-      border: none
       position: relative
-      outline: none
-      -moz-appearance: textfield
-      text-align: center
       font-weight: 300
       font-size: 16px
       line-height: 19px
       color: #383332
+      display: flex
+      justify-content: center
+      align-items: center
+      p
+        margin: 0
 
     p
       font-weight: 300
@@ -181,12 +173,15 @@ body
     color: #383332
 
 .popUp
+  position: relative
   width: 296px
   height: 0px
   background: rgba(251, 236, 234, 0.1)
-  backdrop-filter: blur(4px)
   transition-duration: 0.5s
   overflow: hidden
+  backdrop-filter: blur(4px)
+  -webkit-backdrop-filter: blur(4px)
+
   p
     margin-top: 10px
     margin-left: 9px
